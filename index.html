@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+  <script src="https://unpkg.com/aframe-physics-extras@0.1.2/dist/aframe-physics-extras.min.js"></script>
+
+  <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+  <title>UnderGrounded</title>
+  <link rel="icon" href="night.jpg" type="image/x-icon">
+
+</head>
+
+<body>
+  <a-scene id="scene">
+    <a-camera wasd-controls-enabled="true" position="0 1.6 0" >
+    </a-camera>  
+    <!--Assets-->
+    <a-assets>
+      <a-asset-item id="shooter" src="shooter/gun.gltf"></a-asset-item>
+
+
+    </a-assets>
+
+    <!--A-Frame Environment-->
+    <a-entity id="environment" environment="preset:poison; skyType:gradient; lighting:Point"></a-entity>
+
+    <!-- shooter entity -->
+
+    <a-entity id="player" gltf-model="#shooter"  scale="0.19 0.1 0.1" position="0 1.1 0" rotation ="2 181 1"></a-entity>
+
+
+  </a-scene>
+</body>
+
+</html>
